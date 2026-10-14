@@ -1,0 +1,47 @@
+# Exam Submission: KSU Coffee Docker Assignment
+
+**Student ID:** 671540005020-6
+
+---
+
+## Part A: Promo Image Inspection
+
+1. **Exposed Ports:**
+   - **Answer:** 3000/tcp, 80/tcp
+   - **Command Used:** `docker image inspect kamthornsa/ksu-promo:1.0 --format='{{json .Config.ExposedPorts}}'`
+
+2. **Container Startup Command:**
+   - **Answer:** Entrypoint: ["/docker-entrypoint.sh"] | Cmd: ["nginx","-g","daemon off;"]
+   - **Command Used:** `docker image inspect kamthornsa/ksu-promo:1.0 --format='Cmd: {{json .Config.Cmd}} | Entrypoint: {{json .Config.Entrypoint}}'`
+
+3. **Base Image:**
+   - **Answer:** Alpine Linux v3.24
+   - **Command Used:** `docker run --rm kamthornsa/ksu-promo:1.0 cat /etc/os-release`
+
+---
+
+## Part B: Deployment & Secret Code Retrieval
+
+- **Menu Page URL:** http://localhost:8085
+- **Promo Page URL:** http://localhost:8083
+- **Secret Code / Badge Result:** [ใส่รหัสลับที่ได้จากหน้า http://localhost:8083 ตรงนี้]
+
+---
+
+## Part C: Docker Compose Configuration
+
+```yaml
+name: final-671540005020-6
+
+services:
+  menu:
+    build: .
+    ports:
+      - "8085:80"
+    restart: unless-stopped
+
+  promo:
+    image: kamthornsa/ksu-promo:1.0
+    ports:
+      - "8083:3000"
+    restart: unless-stopped

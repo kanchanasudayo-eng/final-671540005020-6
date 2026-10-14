@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ร้าน KSU Coffee</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .card {
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+            overflow: hidden;
+        }
+        .banner {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .content {
+            padding: 30px;
+        }
+        h1 {
+            color: #4a2c2a;
+            margin-top: 0;
+            margin-bottom: 5px;
+            font-size: 28px;
+        }
+        .student-id {
+            color: #666;
+            font-size: 14px;
+            margin: 2px 0;
+        }
+        .version {
+            display: inline-block;
+            background-color: #e0f2fe;
+            color: #0369a1;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            font-size: 20px;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        li {
+            background: #fdfbf7;
+            border: 1px solid #f0e6d2;
+            margin: 10px 0;
+            padding: 12px 16px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+            color: #444;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+        li span.icon {
+            margin-right: 12px;
+            font-size: 20px;
+        }
+        .promo-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 25px;
+            padding: 12px 0;
+            background: linear-gradient(135deg, #d9534f 0%, #c9302c 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            box-shadow: 0 4px 10px rgba(217, 83, 79, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-sizing: border-box;
+        }
+        .promo-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(217, 83, 79, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?q=80&w=800&auto=format&fit=crop" alt="Coffee Banner" class="banner">
+        <div class="content">
+            <h1>ร้าน KSU Coffee</h1>
+            <p class="student-id">รหัสนักศึกษา: 671540005020-6</p>
+            <div class="version">Menu v2</div>
+            
+            <h2>รายการเมนู</h2>
+            <ul>
+                <li><span class="icon">☕</span> Espresso - 50 บาท</li>
+                <li><span class="icon">🥛</span> Iced Latte - 65 บาท</li>
+                <li><span class="icon">🍵</span> Green Tea - 55 บาท</li>
+                <li><span class="icon">🧋</span> Thai Tea - 60 บาท</li>
+            </ul>
+
+            <a href="http://localhost:8083" class="promo-btn">ดูโปรโมชั่น</a>
+        </div>
+    </div>
+</body>
+</html>
